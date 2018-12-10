@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Cats = (props) => {
-
   const catListItems = props.catList.map(catName => {
     return (
       <li>
