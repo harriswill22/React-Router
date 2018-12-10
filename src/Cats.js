@@ -1,18 +1,24 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
-const Cats =(props) => {
+import { Link } from 'react-router-dom';
+
+const Cats = (props) => {
+
+  const catListItems = props.catList.map(catName => {
     return (
-        <div>
-        <h1>Cats</h1>
-        <ul>
-            <li>
-                <Link to="/cats/oak">Oak</Link>
-            </li>
-            <li>
-                <Link to="/cats/sham">ham</Link>
-            </li>
-        </ul>
-        </div>
+      <li>
+          <Link to={`/cats/${catName}`}>{catName}</Link>
+      </li>
     );
+  });
+
+  return (
+    <div>
+        <h1>CAAAAATSSSz!</h1>
+        <ul>
+          {catListItems}
+        </ul>        
+    </div>
+  );
 };
+
 export default Cats;
