@@ -5,6 +5,8 @@ const OneDog = (props)  =>{
     const allToys =props.toys;
     const dogName = props.match.params.dogName
     const myToys = allToys[dogName];
+    const allImages = props.dogImages
+    const myImages = allImages[dogName]
     return(
         <div>
             <h2>
@@ -13,6 +15,11 @@ const OneDog = (props)  =>{
         <ul>
             {myToys.map((toy)=>{
                 return <li>{toy}</li>
+            })}
+        </ul>
+        <ul>
+            {myImages.map((jeff)=>{
+                return <img src={jeff} alt="dog"/>
             })}
         </ul>
         </div>

@@ -49,6 +49,11 @@ class App extends Component {
         'Grit': [
           'pole'
         ]
+      },
+      dogImages:{
+        'Shelly':[
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHsAAAB7CAMAAABjGQ9NAAAAY1BMVEX///8AAACBgYF3d3d+fn6EhISMjIzp6emJiYlCQkIsLCzj4+P09PQpKSmlpaURERFNTU22travr6/S0tKWlpafn58LCwsWFhY7Ozs1NTUaGhrDw8Pb29siIiJTU1NhYWFqamrOHLcdAAAC80lEQVRoge2bbXOqMBCFu9WKIPKiiNYX8P//ygLemVssJOTsLhmnPd/1mU1ONhuyeXsT1yVZnFJKw8VuL//nJgVFSv91TuL50MWR+truZiJvMvqpOpgDvR8gN4o23tCN1CPfjKJpq+y4OBxn012XXRjQRLkmOiiN7JPmqK+MaN3ALWgK9dAXGzvVW+S2Idcc9KFk2tdKjW1FU+2RrWc2O/vTI5uisFrlGm6fwO6Uhrl4hqunwpv0Kr3azDvJk+6yoVvzWk+RbDHhxCYS9Vzixo4kh33hGLhgmnNFE4nV7e/OaLH6EUATJSJo9wHvAveHJrr6Qwu4DUbTBxcN2ewh7hJnoLnVBD7gjY7+0LxFxkNTxkAveWha4miOzTrh65uNJvjrG3OuG938oengD30D92+uw1uB2/eHALrC0HyHN/kUq9AF5hqtGyTQpT90hp1KBOY6BRc24vBl0vvkWIDnQCTqtirbH+qOXxUXDIzNtdCnrRdDv8ugkblmVCbfBTlcBo3sXOxzx0MvZrPXd7hHm/05fKo82mwtg0YG/Hc6HI76UlTt78v60J4RkQEH5zro3e2lyYwO7/WGgMKiHuzQcBVms/E2CXX01R/a0KExXaDDJeYadbgAGl3XZz4azWYCYcOJ9Lnra0Y0f2nj+7XjZeJPMaqUOxPNqc1M7VcTxKpSzD1QqmjXi+u+mMUwJ7Nwi2FGMmfX4fg3Yf7pY4eiBepwNK+JHAEws8kc96CkKnTci2/e0EjgQufrVg6NUJ2EjnudAsdRl+nQ+CfHIpl3cf0sx8hl3xHETiUEep04pvxzOlu83zPOw6l1BHyFa9AmX1dhNAGuwH5o65F98siurOhSjb22ssEL5AnKrexCjX21LjX4ds8u61FFD20ddL0hbzKcOb2mqs+DzIFL7yRPMlUynParKYrHC+dS/TVYMMoW6Oy0aTO8nYEdGo6Kh+a8muXtX6Pd82Z6Ey1QzYqT75a7HWZ869lqv1tk52OULTXeuH4Bbkkoy90Y520AAAAASUVORK5CYII=",
+        ]
       }
     };
   }
@@ -70,7 +75,8 @@ class App extends Component {
           }}/>
           <Route path="/dogs/:dogName" render={(props) =>{
             console.log(props);
-            return <OneDog toys={this.state.dogToys} {...props}/>
+            return <OneDog toys={this.state.dogToys} {...props} 
+            dogImages={this.state.dogImages}/>
           }}/>
         </div>
       </Router>
@@ -79,3 +85,22 @@ class App extends Component {
 }
 
 export default App;
+
+
+
+
+
+// this.state={
+//   dogs: [
+//    { "shelly": {
+//       "breed": "golden",
+//       "size": "big",
+
+//     }
+//   },
+//    { "Jeff": {
+
+//     }
+//   }
+//   ]
+// }
